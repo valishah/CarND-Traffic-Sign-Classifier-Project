@@ -43,8 +43,11 @@ For exploratory visualization please see Traffic_Sign_Classifier.ipynb
 
 
 Generally the idea for preprocessing the image was inspired by the published baseline model.
+
 1.Images were transformed in the YUV space and adjusted by histogram sketching and by increasing sharpness
+
 2.Before augmentation, I combined the original train set and valid set together, and augmented by generating 10 additional images. After that I shuffled and splited it into new train and valid set(by 20%). 
+
 3.All images were processed by transform_img function, and were augmented by augment_img function. 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -75,7 +78,7 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-I am using a well known architecture (LeNet) for training the model because of simplicity of implementation and because it performs well on recognition task with tens of classes. There is only one enhancement I applied in the LeNet model: adding dropout to mitigate overfitting.
+I am using a well known architecture (LeNet) for training the model because of simplicity of implementation and because it performs well on recognition task with tens of classes. There is only one enhancement: adding dropout to mitigate overfitting.
 
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
